@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background-color: #e5ded9;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#INTRODUCCIÓN">INTRODUCCIÓN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#DATOS">DATOS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#RECETAS_FACILES">RECETAS FÁCILES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#RECETAS_DIFICILES">RECETAS DIFÍCILES</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div style="text-align: center; margin-top: 40px;" id="INTRODUCCIÓN">
+  <div style="
+    background-color: #737373; 
+    border: 3px solid black; 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 10px;
+  ">
+    <h1 style="text-align: center; margin: 0; color : white;font-family: 'Abibas';
+    font-weight: bold;">
+      DATOS Y RECETAS DE COMIDA 
+    </h1>
+    <h1 style="text-align: center; margin: 0; color : white;font-family: 'Abibas';
+    font-weight: bold;">
+      MEXICANA
+    </h1>
+  </div>
+</div>
+
+<div style="display: flex; margin-left: 100px; margin-top: 80px;">
+  <img src="imagenes/comida.png" alt="comida" 
+       style="width: 450px; border: 3px solid black;">
+  
+  <p style="max-width: 500px; margin-left: 100px; text-align: justify; font-size: 18px; color: #2f2f2f;">
+    La gastronomía mexicana es un tesoro cultural reconocido mundialmente por su riqueza, diversidad y tradición. 
+    Cada platillo refleja la historia, las raíces indígenas y la fusión con influencias españolas, 
+    creando sabores únicos que combinan ingredientes frescos, especias y técnicas ancestrales. 
+    Más que alimento, la comida mexicana es una expresión de identidad, 
+    creatividad y patrimonio que trasciende generaciones y fronteras. 
+  </p>
+</div>
+
+<hr style="border: none; height: 3px; background-color: black; width: 80%; margin: 100px auto;">
+
+<div style="text-align: center; margin-top: 40px;" id="DATOS">
+  <div style="
+    background-color: #737373; 
+    border: 3px solid black; 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 10px;
+  ">
+    <h1 style="text-align: center; margin: 0; color : white;font-family: 'Abibas';
+    font-weight: bold;">
+      DATOS CURIOSOS SOBRE TRES DE LAS
+    </h1>
+    <h1 style="text-align: center; margin: 0; color : white;font-family: 'Abibas';
+    font-weight: bold;">
+      RECETAS MÁS CONOCIDAS
+    </h1>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: flex-start; margin-left: 100px; margin-top: 80px; gap: 180px;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/tacos.png" alt="tacos" data-bs-toggle="modal" data-bs-target="#modalTacos"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      TACOS AL PASTOR 🌮
+    </p>
+  </div>
+  
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/mole.png" alt="mole" data-bs-toggle="modal" data-bs-target="#modalMole"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      MOLE POBLANO 🍫
+    </p>
+  </div>
+  
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/chile_nogada.png" alt="chile en nogada" data-bs-toggle="modal" data-bs-target="#modalChile"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      CHILE EN NOGADA 🌶️
+    </p>
+  </div>
+</div>
+
+<p style="max-width: 500px; margin-top: 60px; margin-left: 100px; text-align: justify; font-size: 18px; color: #2f2f2f;">
+  DA CLICK EN LA IMAGEN PARA MOSTRAR LOS DATOS CURIOSOS
+</p>
+
+<hr style="border: none; height: 3px; background-color: black; width: 80%; margin: 100px auto;">
+
+<div style="text-align: center; margin-top: 40px;" id="RECETAS_FACILES">
+  <div style="
+    background-color: #737373; 
+    border: 3px solid black; 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 10px;
+  ">
+    <h1 style="text-align: center; margin: 0; color : white;font-family: 'Abibas';
+    font-weight: bold;">
+      TRES RECETAS MÁS DELICIOSAS Y SENCILLAS DE HACER
+    </h1>
+  </div>
+</div>
+
+<!-- === RECETAS SENCILLAS === -->
+<div style="display: flex; justify-content: flex-start; margin-left: 100px; margin-top: 80px; gap: 180px;">
+  <!-- Guacamole -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/guacamole.png" alt="guacamole" data-bs-toggle="modal" data-bs-target="#modalGuacamole"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      GUACAMOLE 🥑
+    </p>
+  </div>
+
+  <!-- Agua de Jamaica -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/jamaica.png" alt="jamaica" data-bs-toggle="modal" data-bs-target="#modalJamaica"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      AGUA DE JAMAICA 🍹
+    </p>
+  </div>
+
+  <!-- Quesadillas -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/quesadillas.png" alt="quesadillas" data-bs-toggle="modal" data-bs-target="#modalQuesadillas"
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      QUESADILLAS 🌮🧀
+    </p>
+  </div>
+
+</div>
+  <p style="max-width: 500px; margin-top: 60px; margin-left: 100px; text-align: justify; font-size: 18px; color: #2f2f2f;">
+    DA CLICK EN LA IMAGEN PARA MOSTRAR LAS RECETA
+  </p>
+</div>
+
+<hr style="border: none; height: 3px; background-color: black; width: 80%; margin: 100px auto;">
+
+<div style="text-align: center; margin-top: 40px;" id="RECETAS_DIFICILES">
+  <div style="
+    background-color: #737373; 
+    border: 3px solid black; 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 10px;
+  ">
+    <h1 style="text-align: center; margin: 0; color: white; font-family: 'Abibas';
+      font-weight: bold; font-size: 30px;">
+      TRES RECETAS MÁS DELICIOSAS Y DIFÍCILES DE HACER PARA
+    </h1>
+
+    <h1 style="text-align: center; margin: 0; color: white; font-family: 'Abibas';
+      font-weight: bold; font-size: 30px;">
+      LOS VALIENTES
+    </h1>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: flex-start; margin-left: 100px; margin-top: 80px; gap: 180px;">
+  <!-- Cochinita Pibil -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/cochinita.png" alt="cochinita" 
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;"
+         data-bs-toggle="modal" data-bs-target="#modalCochinita">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      COCHINITA
+    </p>
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; text-align: center;">
+      PIBIL 🌮
+    </p>
+  </div>
+
+  <!-- Pescado a la Veracruzana -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/pescado.png" alt="pescado" 
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;"
+         data-bs-toggle="modal" data-bs-target="#modalPescado">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+       PESCADO A LA
+    </p>
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; text-align: center;">
+      VERACRUZANA🐟
+    </p>
+  </div>
+
+  <!-- Barbacoa de Borrego -->
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="imagenes/barbacoa.png" alt="barbacoa" 
+         style="width: 230px; height: 230px; border: 3px solid black; border-radius: 50%; cursor: pointer;"
+         data-bs-toggle="modal" data-bs-target="#modalBarbacoa">
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; margin-top: 10px; text-align: center;">
+      BARBACOA DE BORREGO
+    </p>
+    <p style="font-weight: bold; font-family: 'Abibas'; font-size: 16px; color: #2f2f2f; text-align: center;">
+      (ESTILO HIDALGO) 🥩
+    </p>
+  </div>
+</div>
+
+<p style="max-width: 500px; margin-top: 60px; margin-left: 100px; text-align: justify; font-size: 18px; color: #2f2f2f;">
+  DA CLICK EN LA IMAGEN PARA MOSTRAR LA RECETA
+</p>
+
+
+<!-- === MODALES DE DATOS CURIOSOS === -->
+<!-- Tacos -->
+<div class="modal fade" id="modalTacos" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🌮 Tacos al Pastor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>📍 Origen:</b> Ciudad de México, pero con raíces libanesas.  
+          <br><br>
+          <b>💡 Dato curioso:</b> Los tacos al pastor nacen de la adaptación mexicana del 
+          <i>shawarma</i> árabe, traído por inmigrantes libaneses en el siglo XX.  
+          En lugar de cordero, los mexicanos usaron cerdo y lo marinaron con achiote, 
+          chiles secos y piña, creando una joya culinaria única. 🔥
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Mole -->
+<div class="modal fade" id="modalMole" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🍫 Mole Poblano</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>📍 Origen:</b> Puebla, México.  
+          <br><br>
+          <b>💡 Dato curioso:</b> Se dice que el mole fue creado por monjas del Convento de Santa Rosa 
+          en el siglo XVII. Mezclaron ingredientes que tenían a la mano —chiles, cacao, pan y especias— 
+          para recibir al virrey, sin saber que estaban inventando una de las salsas más emblemáticas de México.  
+          <br><br>
+          “Mole” proviene del náhuatl <i>mōlli</i>, que significa <b>salsa o mezcla</b>. 🍽️
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chile en nogada -->
+<div class="modal fade" id="modalChile" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🌶️ Chile en Nogada</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>📍 Origen:</b> Puebla, México —1821.  
+          <br><br>
+          <b>💡 Dato curioso:</b> Fue creado por monjas agustinas para celebrar la 
+          <b>Independencia de México</b> y honrar a Agustín de Iturbide.  
+          Los colores del platillo (verde, blanco y rojo) representan la bandera mexicana:  
+          el chile poblano, la nogada de nuez y la granada. 🇲🇽  
+          <br><br>
+          Es un platillo de temporada: solo se prepara entre julio y septiembre, cuando las nueces y las granadas están frescas. 🍈
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- === MODALES DE RECETAS SENCILLAS === -->
+<!-- Guacamole -->
+<div class="modal fade" id="modalGuacamole" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🥑 Guacamole</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: 2 aguacates, 1 tomate, 1/4 cebolla, cilantro, jugo de limón, sal y chile serrano opcional.  
+          <br><br>
+          Preparación: Tritura los aguacates, mezcla con tomate, cebolla y cilantro. Añade limón, sal y chile al gusto. Sirve con totopos. 🥗
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Agua de Jamaica -->
+<div class="modal fade" id="modalJamaica" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🍹 Agua de Jamaica</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: 1 taza flores de jamaica, 1 litro agua, azúcar al gusto.  
+          <br><br>
+          Preparación: Hierve agua, agrega jamaica, deja reposar 10 min, cuela, endulza y sirve fría con hielo. ❄️
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quesadillas -->
+<div class="modal fade" id="modalQuesadillas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🌮🧀 Quesadillas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: Tortillas, queso Oaxaca o manchego, aceite opcional, rellenos al gusto.  
+          <br><br>
+          Preparación: Coloca queso y relleno sobre tortilla, dóblala y cocina en sartén hasta que se derrita el queso. Sirve caliente. 🌶️🧀
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODALES DE RECETAS -->
+<!-- Cochinita Pibil -->
+<div class="modal fade" id="modalCochinita" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🌮 Cochinita Pibil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: 1 kg de carne de cerdo, achiote, jugo de naranja agria, hojas de plátano, sal y pimienta.  
+          <br><br>
+          Preparación: Marina la carne con achiote, jugo de naranja, sal y pimienta. Envuelve en hojas de plátano y hornea hasta que esté tierna. Sirve con cebolla encurtida y tortillas. 🌿
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pescado a la Veracruzana -->
+<div class="modal fade" id="modalPescado" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🐟 Pescado a la Veracruzana</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: Filete de pescado blanco, jitomate, cebolla, aceitunas, alcaparras, chile, aceite y especias.  
+          <br><br>
+          Preparación: Sofríe cebolla y jitomate, añade aceitunas, alcaparras y chiles. Cocina el pescado con esta salsa hasta que quede jugoso. Sirve caliente con arroz blanco. 🍚
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Barbacoa de Borrego -->
+<div class="modal fade" id="modalBarbacoa" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">🥩 Barbacoa de Borrego (Estilo Hidalgo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="font-size: 17px; color: #2f2f2f;">
+        <p>
+          <b>🍽 Receta:</b>  
+          <br><br>
+          Ingredientes: 1 pierna de borrego, hojas de maguey, ajo, sal, pimienta, clavo y orégano.  
+          <br><br>
+          Preparación: Marina la carne con especias. Envuelve en hojas de maguey y cocina al vapor u horno hasta que esté tierna. Sirve con consomé y tortillas calientes. 🔥
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

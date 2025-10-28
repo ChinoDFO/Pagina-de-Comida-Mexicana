@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+h1 {
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+h2, p {
+  margin: 10px;
+}
+h4 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+ul li {
+  float: left;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7); /* Fondo oscuro, 70% opaco */
+  justify-content: center;
+  align-items: center;
+}
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #f0f8ff; /* Color bonito: AliceBlue */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+  max-width: 500px; /* Tamaño máximo */
+  width: 90%; /* Responsivo */
+  text-align: center;
+}
+
+
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
+}
+
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+</style>
+<style>
+.parallax {
+  background-image: url('1.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat:repeat;
+  background-size: cover;
+  width: 100%;
+}
+</style>
+
+  <ul style="  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  width: 100%;max-width: 1600px;">
+  <li><a class="active" href="#datos"><b>Datos</b></a></li>
+  <li><a href="#FA">Formacion academica</a></li>
+  <li><a href="#EL">Experiencia laboral</a></li>
+    <li><a href="#FE">Acerca de mi</a></li>
+  <li><a href="#portafolio">Portafolio</a></li>
+</ul>
+  <title>CV</title>
+</head>
+<body style="font-family: Arial ;margin:0; padding: 0px;">
+
+
+<div id="modalTel" class="modal">
+  <div class="modal-content">
+    <span class="close"  data-modal="modalTel">&times;</span>
+    <h3>Telefono</h3>
+    <p>+52 3329633148</p>
+  </div>
+</div>
+
+<!-- Modal Correo -->
+<div id="modalCorreo" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modalCorreo">&times;</span>
+    <h3>Correo</h3>
+    <p>a22300864@ceti.mx</p>
+  </div>
+</div>
+
+
+  <h1>   </h1>
+  <div style="display: flex; align-items: flex-start; gap: 20px;max-width: 800px;">
+    
+    <img src="yo.jpg" id="foto" style="border-radius: 50%;" width="250" height="250" alt="Foto">
+    
+    <div id="datos" style="flex: 1; text-align: left;">
+      <h2>Daniel Flores Ortiz</h2>
+      <p>17 años</p>
+      <p>C. Nueva Escocia 1885, Providencia 5a Secc., 44638 Guadalajara, Jal., México</p>
+      <p>Desarrollo De Software</p>
+      <p>7°G1</p>
+      <p>Programación Web</p>
+      <p>
+        <span id="tel" style="cursor:pointer" onclick="tel()">&#128222; Teléfono: +52 3329633148</span></p>
+<p>
+  <span id="correo" style="cursor: pointer;" onclick="correo()">&#9993; Correo: a22300864@ceti.mx</span></p>
+    </div>
+  </div>
+  <hr style="max-width: 1600px;">
+
+  <div class="parallax" id="FE" style="margin-top: 30px; text-align: center; border: 2px solid black; border-radius: 15px; padding: 20px;max-width: 1600px;">
+    <h1><b><i>Acerca de mi</i></b></h1>
+    <p>Soy Daniel Flores Ortiz. Me gustan mucho salir a caminar, ir al bosque, pasar tiempo con mis amigos
+      cocinar, escuchar música (en especial a junior h), ver películas o series. No soy mucho de jugar videojuegos
+      pero de vez en cuando me gusta jugar algo. Me gusta mucho aprender cosas nuevas y me interesa mucho la tecnología.
+      En deportes, me gusta correr, hacer ejecicio de fuerza y jugar basquetbol.
+    </p>
+    <p></p>
+  </div>
+  
+  <div style="display: flex; align-items: stretch; gap: 20px;margin-top: 50px;">
+    <div id="FA" style="flex: 1; text-align: center; border: 2px solid black; border-radius: 15px; padding: 20px; background-color: #f5f5f5;max-width: 800px;">
+      <h1><b><i>Formación Académica</i></b></h1>
+      <p style="font-size: 50px;">Tecnólogo en desarrollo de software</p>
+    </div>
+  
+    <div id="EL" style="flex: 1; text-align: left; border: 2px solid black; border-radius: 15px; padding: 20px; background-color: #f5f5f5;font-size: 25px;max-width: 800px;">
+      <h1><b><i>Experiencia laboral</i></b></h1>
+
+      <h4>Semestre 1</h4>
+        <p>Mecánica I</p>
+        <p>Química I</p>
+        <p>Inglés I</p>
+        <p>Lectura, Expresión Oral y Escrita I</p>
+        <p>TICS</p>
+        <p>Lógica</p>
+        <p>Álgebra</p>
+        <p>Fundamentos de Programación</p>
+
+      <h4>Semestre 2</h4>
+        <p>Mecánica II</p>
+        <p>Química II</p>
+        <p>Inglés II</p>
+        <p>Lectura, Expresión Oral y Escrita II</p>
+        <p>Geometría y Trigonometría</p>
+        <p>Dibujo Técnico</p>
+        <p>Fundamentos de Electrónica I</p>
+        <p>MTI I</p>
+        <p>Programación I</p>
+  
+
+      <h4>Semestre 3</h4>
+    
+        <p>Física I</p>
+        <p>Biología</p>
+        <p>Inglés III</p>
+        <p>Ética</p>
+        <p>Geometría Analítica</p>
+        <p>MTI II</p>
+        <p>Programación II</p>
+        <p>Sistemas Digitales I</p>
+        <p>Fundamentos de Electrónica II</p>
+   
+
+      <h4>Semestre 4</h4>
+          <p>Física II</p>
+        <p>Ecología</p>
+        <p>Inglés IV</p>
+        <p>Cálculo Diferencial</p>
+        <p>Sistemas Digitales II</p>
+        <p>Anápsis y Diseño de Sistemas</p>
+        <p>Infraestructura de Redes Locales</p>
+        <p>Programación Orientada a Objetos</p>
+        <p>Temas de Electrónica I</p>
+   
+
+      <h4>Semestre 5</h4>
+    
+        <p>Ciencia, Tecnología, Sociedad y Valores</p>
+        <p>Inglés V</p>
+        <p>Administración</p>
+        <p>Cálculo Integral</p>
+        <p>Arquitectura y Organización de Computadoras</p>
+        <p>Bases de Datos I</p>
+        <p>Temas de Electrónica II</p>
+        <p>Estructuras de Datos</p>
+        <p>Enrutamiento de Redes</p>
+ 
+
+      <h4>Semestre 6</h4>
+ 
+        <p>Temas de Filosofía</p>
+        <p>Metodología de la Investigación Appcada</p>
+        <p>Inglés VI</p>
+        <p>Probabipdad y Estadística</p>
+        <p>Bases de Datos II</p>
+        <p>Interfaces</p>
+        <p>Programación Móvil I</p>
+        <p>Sistemas Operativos</p>
+        <p>Sistemas Embebidos I</p>
+ 
+
+      <h4>Talleres</h4>
+         
+        <p>Escultura</p>
+   
+    </div>
+  </div>
+
+
+
+  <div id="portafolio" style="margin-top: 30px; text-align: center; border: 2px solid black; border-radius: 15px; padding: 20px; background-color: #f5f5f5
+  ;max-width: 1600px;">
+    <h1><b><i>PORTAFOLIO</i></b></h1>
+  <div class="gallery">
+    <button onclick="previmage()" style="text-align: right;">    &#10094;</button>
+     
+  <!-- Imagen principal -->
+  <img id="mainImage" src="2doI.jpg" style="width:100%;max-width: 300px; border-radius:10px;border: 2px solid black;">
+   <button onclick="nextimage()" style="text-align: start;">    &#10095;</button>
+  <!-- Miniaturas -->
+  <div class="thumbnails" style="display:flex; gap:10px; margin-top:10px; overflow-x:auto;">
+    <!-- 2do Semestre -->
+    <img src="2doI.jpg" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="2doII.jpg" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <!-- 3er Semestre -->
+    <img src="3roI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="3roII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <!-- 4to Semestre -->
+    <img src="4toI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toIII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toIV.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toV.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toVI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toVII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toVIII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toIX.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toX.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="4toXI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <!-- 5to Semestre -->
+    <img src="5toI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="5toII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="5toIII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="5toIV.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <!-- 6to Semestre -->
+    <img src="6toI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toIII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toIV.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toV.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toVI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toVII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toVIII.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toIX.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toX.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+    <img src="6toXI.png" style="width:45px; cursor:pointer;" onclick="showImage(this)">
+
+  </div>
+</div>
+
+  </div>
+<script>
+function abrirModal(id) {
+  document.getElementById(id).classList.add("show");
+}
+
+document.getElementById("tel").onclick = () => abrirModal("modalTel");
+document.getElementById("correo").onclick = () => abrirModal("modalCorreo");
+
+document.querySelectorAll(".close").forEach(span => {
+  span.onclick = () => {
+    const modalId = span.getAttribute("data-modal");
+    document.getElementById(modalId).classList.remove("show");
+  };
+});
+
+
+window.onclick = (event) => {
+  if (event.target.classList.contains("modal")) {
+    event.target.classList.remove("show");
+  }
+};
+</script>
+<script>
+</script>
+<script>
+  let i=0;
+  const img=['2doI.jpg','2doII.jpg','3roI.png','3roII.png','4toI.png','4toII.png','4toIII.png','4toIV.png', '4toV.png','4toVI.png','4toVII.png','4toVIII.png','4toIX.png','4toX.png','4toXI.png','5toI.png','5toII.png','6toI.png','6toII.png',
+  '6toIII.png','6toIV.png','6toV.png','6toVI.png','6toVII.png','6toVIII.png','6toIX.png','6toX.png','6toXI.png'];
+  function previmage() {
+
+    i=(i-1+img.length)%img.length
+    document.getElementById('mainImage').src = img[i];
+  }
+    function nextimage() {
+    i=(i+1+img.length)%img.length
+    document.getElementById('mainImage').src = img[i];
+  }
+  function showImage(el) {
+  document.getElementById('mainImage').src = el.src;
+  i = img.indexOf(el.src);
+}
+</script>
+</body>
+</html>
